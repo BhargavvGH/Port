@@ -1,0 +1,43 @@
+##################################
+# Python
+##################################
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.ipynb_checkpoints/
+
+##################################
+# Unity
+##################################
+# Generated folders
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+
+# Visual Studio / Rider
+.vs/
+.vscode/
+
+# Unity cache
+*.csproj.user
+*.suo
+*.user
+*.userprefs
+
+##################################
+# OS
+##################################
+.DS_Store
+Thumbs.db
+
+##################################
+# Logs
+##################################
+*.log

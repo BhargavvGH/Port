@@ -1,0 +1,6 @@
+crane_id,status,containers_per_hour
+C1,operating,38
+C2,operating,34
+C3,idle,27
+C4,operating,34
+C5,operating,40
