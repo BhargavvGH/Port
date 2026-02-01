@@ -51,6 +51,7 @@
     <Compile Include="Assets\Scripts\YardStatusController.cs" />
     <Compile Include="Assets\Scripts\ShipMovementController.cs" />
     <Compile Include="Assets\Scripts\ShipSpawner.cs" />
+    <Compile Include="Assets\Scripts\CraneController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

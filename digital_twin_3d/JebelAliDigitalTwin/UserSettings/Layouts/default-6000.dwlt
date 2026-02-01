@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 91
+  controlID: 89
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 366.40002
     height: 716.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -300,8 +300,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "UnityEditor.MainToolbarWindow\u200B"
   m_Pos:
     serializedVersion: 2
-    x: -25600
-    y: -25600
+    x: 0
+    y: 0
     width: 1536
     height: 36
   m_SerializedDataModeController:
@@ -566,8 +566,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: -25600
-    y: -25140
+    x: 0
+    y: 448
     width: 1168.6
     height: 266.8
   m_SerializedDataModeController:
@@ -613,13 +613,12 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 35410
+    - m_Data: 35478
     m_LastClickedID:
-      m_Data: 35410
+      m_Data: 35478
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 35410
-    - m_Data: 1000000000
+    - m_Data: 35478
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -652,7 +651,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 35410
+    - m_Data: 35478
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -680,9 +679,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -2922
-    m_LastClickedInstanceID: -2922
-    m_HadKeyboardFocusLastEvent: 1
+    - m_Data: -2184
+    m_LastClickedInstanceID: -2184
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: []
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -734,8 +733,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: -24430.4
-    y: -25564
+    x: 1170.6
+    y: 24
     width: 365.40002
     height: 690.8
   m_SerializedDataModeController:
@@ -785,8 +784,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: -25600
-    y: -25564
+    x: 0
+    y: 24
     width: 284.6
     height: 398
   m_SerializedDataModeController:
@@ -805,12 +804,11 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs:
-      - m_Data: -2922
+      m_SelectedIDs: []
       m_LastClickedID:
-        m_Data: -2922
+        m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -1288
+      - m_Data: -1320
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -857,8 +855,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: -25314.4
-    y: -25564
+    x: 286.6
+    y: 24
     width: 882
     height: 398
   m_SerializedDataModeController:
@@ -1235,9 +1233,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 20.392159, y: 4.380085, z: 7.5429525}
+    m_Target: {x: 20.224436, y: 6.4350677, z: 7.5429525}
     speed: 2
-    m_Value: {x: 20.392159, y: 4.380085, z: 7.5429525}
+    m_Value: {x: 20.224436, y: 6.4350677, z: 7.5429525}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1275,7 +1273,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -1283,17 +1281,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 1, z: 0, w: 0}
+    m_Target: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
     speed: 2
-    m_Value: {x: 0.00000006620412, y: 1, z: 0, w: 0.00000006620412}
+    m_Value: {x: -0.7071068, y: 0, z: -0, w: -0.7071068}
   m_Size:
-    m_Target: 8.444364
+    m_Target: 17.830587
     speed: 2
-    m_Value: 8.444364
+    m_Value: 17.830587
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5

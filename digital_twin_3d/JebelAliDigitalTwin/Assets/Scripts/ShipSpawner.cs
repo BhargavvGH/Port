@@ -25,6 +25,8 @@ public class ShipSpawner : MonoBehaviour
     public GameObject shipPrefab;
     public Transform berthPoint;
 
+    public CraneController[] cranes;
+
     private Queue<GameObject> shipQueue = new Queue<GameObject>();
     private bool berthOccupied = false;
 
@@ -72,7 +74,9 @@ public class ShipSpawner : MonoBehaviour
 
         GameObject ship = shipQueue.Dequeue();
         ShipMovementController movement = ship.GetComponent<ShipMovementController>();
+        
 
+        movement.cranes = cranes;
         movement.berthPoint = berthPoint;
         movement.onDeparture = OnShipDeparture;
 

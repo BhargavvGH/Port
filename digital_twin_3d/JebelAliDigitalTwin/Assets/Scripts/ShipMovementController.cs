@@ -6,6 +6,8 @@ public class ShipMovementController : MonoBehaviour
 {
     public Transform berthPoint;
     public float speed = 2f;
+
+    public CraneController[] cranes;   // cranes to activate
     public Action onDeparture;
 
     private Vector3 startPoint;
@@ -18,8 +20,25 @@ public class ShipMovementController : MonoBehaviour
 
     IEnumerator ShipLifecycle()
     {
+        // ARRIVAL
         yield return StartCoroutine(MoveTo(berthPoint.position));
+
+        // ACTIVATE CRANES (ship docked)
+        foreach (var crane in cranes)
+        {
+            crane.isActive = true;
+        }
+
+        // SIMULATE LOADING / UNLOADING
         yield return new WaitForSeconds(5f);
+
+        // DEACTIVATE CRANES (ship leaving)
+        foreach (var crane in cranes)
+        {
+            crane.isActive = false;
+        }
+
+        // DEPARTURE
         yield return StartCoroutine(MoveTo(startPoint));
 
         onDeparture?.Invoke();
