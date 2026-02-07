@@ -2,10 +2,15 @@ using UnityEngine;
 using System.Collections;
 using System;
 
+
+
 public class ShipMovementController : MonoBehaviour
 {
     public Transform berthPoint;
     public float speed = 2f;
+
+    public GameObject containerPrefab;
+    public Transform yardSlot;
 
     public CraneController[] cranes;   // cranes to activate
     public Action onDeparture;
@@ -23,14 +28,18 @@ public class ShipMovementController : MonoBehaviour
         // ARRIVAL
         yield return StartCoroutine(MoveTo(berthPoint.position));
 
-        // ACTIVATE CRANES (ship docked)
+        // ACTIVATE CRANES
         foreach (var crane in cranes)
         {
             crane.isActive = true;
         }
 
-        // SIMULATE LOADING / UNLOADING
-        yield return new WaitForSeconds(5f);
+        // SPAWN CONTAINERS
+        for (int i = 0; i < 5; i++)
+        {
+            SpawnContainer();
+            yield return new WaitForSeconds(1f);
+        }
 
         // DEACTIVATE CRANES (ship leaving)
         foreach (var crane in cranes)
@@ -57,4 +66,38 @@ public class ShipMovementController : MonoBehaviour
             yield return null;
         }
     }
+
+    void SpawnContainer()
+{
+    Debug.Log("SpawnContainer called");
+
+    if (containerPrefab == null)
+    {
+        Debug.LogError("containerPrefab is NULL");
+        return;
+    }
+
+    if (yardSlot == null)
+    {
+        Debug.LogError("yardSlot is NULL");
+        return;
+    }
+
+    Vector3 spawnPos = transform.position + new Vector3(0, 1f, 0);
+
+    GameObject container = Instantiate(containerPrefab, spawnPos, Quaternion.identity);
+
+    ContainerMover mover = container.GetComponent<ContainerMover>();
+
+    if (mover == null)
+    {
+        Debug.LogError("ContainerMover component is MISSING on container prefab");
+        return;
+    }
+
+    mover.StartMove(yardSlot.position);
+}
+
+
+
 }

@@ -24,6 +24,8 @@ public class ShipSpawner : MonoBehaviour
     public string apiUrl = "http://127.0.0.1:8000/ships";
     public GameObject shipPrefab;
     public Transform berthPoint;
+    public GameObject containerPrefab;
+    public Transform yardSlot;
 
     public CraneController[] cranes;
 
@@ -79,6 +81,8 @@ public class ShipSpawner : MonoBehaviour
         movement.cranes = cranes;
         movement.berthPoint = berthPoint;
         movement.onDeparture = OnShipDeparture;
+        movement.containerPrefab = containerPrefab;
+        movement.yardSlot = yardSlot;
 
         berthOccupied = true;
         movement.StartMovement();
